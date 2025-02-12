@@ -1,10 +1,9 @@
-function App() {
+import Homepage from "./pages/Homepage"
 
+function App() {
   return (
     <>
-      <h1 className='text-3xl font-bold underline'>
-        TT4 Project
-      </h1>
+      <Homepage />
     </>
   )
 }
