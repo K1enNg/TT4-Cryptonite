@@ -25,7 +25,7 @@ const Navbar = () => {
         <Link to="/contact" className='hover:text-orange-400'>Contact</Link>
       </div>
 
-      <div className='ml-8 flex items-center'>
+      <div className='mr-8 flex items-center'>
         <button 
           onClick={toggleLanguage} 
           className='flex items-center gap-2 px-4 py-2 border bg-violet-800 rounded-lg bg-gradient shadow-md hover:bg-orange-400 transition'

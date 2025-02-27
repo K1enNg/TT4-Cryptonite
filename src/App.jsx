@@ -9,8 +9,8 @@ import Layout from "./components/Layout";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Homepage />} />
+      <Route element={<Layout />}>
+        <Route path="/" index element={<Homepage />} />
         <Route path="/coin/:coinId" element={<Coin />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Service />} />
