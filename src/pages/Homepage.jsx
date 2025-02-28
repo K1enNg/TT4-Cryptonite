@@ -1,10 +1,12 @@
 import React from 'react'
 import Hero from '../components/Hero'
+import Coin from '../components/Coin'
 
 const Homepage = () => {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
+      <Coin />
     </>
   )
 }
