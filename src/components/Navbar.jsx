@@ -1,10 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../assets/logo.png'
 import UKFlag from '../assets/en.png' 
 import FranceFlag from '../assets/fr.png'
+import { CoinContext } from '../api/CoinContext'
 
 const Navbar = () => {
+
+  const {setCurrency} = useContext(CoinContext)
+
+  const currencyHandler = (event) => {
+    switch (event.target.value) {
+      case 'usd':
+        setCurrency({name: 'usd', symbol: '$'})
+        break
+      case 'eur':
+        setCurrency({name: 'eur', symbol: '€'})
+        break
+      case 'cad':
+        setCurrency({name: 'cad', symbol: 'C$'})
+        break
+      default:
+        setCurrency({name: 'usd', symbol: '$'})
+    }
+  }
+
   const [language, setLanguage] = useState('en')
 
   const toggleLanguage = () => {
@@ -24,7 +44,13 @@ const Navbar = () => {
         <Link to="/services" className='hover:text-orange-400'>Services</Link>
         <Link to="/contact" className='hover:text-orange-400'>Contact</Link>
       </div>
-
+      <div>
+        <select onChange={currencyHandler} className='px-1 py-1 border bg-white rounded-lg bg-gradient shadow-md mr-7'>
+          <option value="usd">USD</option>
+          <option value="eur">EUR</option>
+          <option value="cad">CAD</option>
+        </select>
+      </div>
       <div className='mr-8 flex items-center'>
         <button 
           onClick={toggleLanguage} 
