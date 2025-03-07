@@ -5,6 +5,8 @@ import UKFlag from '../assets/en.png'
 import FranceFlag from '../assets/fr.png'
 import { CoinContext } from '../api/CoinContext'
 import { useTranslation } from 'react-i18next'
+import i18n from '../i18n'; 
+
 
 const Navbar = () => {
 
