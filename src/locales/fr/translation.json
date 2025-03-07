@@ -1,7 +1,6 @@
 {
-    
-        "services": "Services",
-        "about": "À propos",
-        "contact": "Nous contacter"
-    
+  "Services": "Services",
+  "About": "À propos",
+  "Contact": "Nous contacter",
+  "AboutTitle": "Bienvenue a cryptonite"
 }
