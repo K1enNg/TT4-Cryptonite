@@ -14,26 +14,43 @@ const CoinContextProvider = (props) => {
     const fetchAllCoins = async () => {
         const options = {
             method: 'GET',
-            headers: {accept: 'application/json', 'x-cg-pro-api-key': 'CG-WHRX6H6Zj3W1MvYp4ehM2PAV'}
-          };
-          
-          fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`, options)
-            .then(res => res.json())
-            .then(res => setCoins(res))
-            .catch(err => console.error(err));
+            headers: {
+                'accept': 'application/json'
+            }
+        };
+
+        try {
+            const response = await fetch(
+                `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en`,
+                {
+                    ...options,
+                    mode: 'cors'
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log('Fetched data:', data);
+            setCoins(data);
+        } catch (error) {
+            console.error('Error fetching coins:', error);
+        }
     }
 
     useEffect(() => {
         fetchAllCoins();
-    },[currency])
+    }, [currency])
 
     const contextValue = {
         coins, currency, setCurrency
     }
 
     return (
-        <CoinContext.Provider value={{}}>
-        {props.children}
+        <CoinContext.Provider value={contextValue}>
+            {props.children}
         </CoinContext.Provider>
     );
 }
