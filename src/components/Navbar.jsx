@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import Logo from '../assets/logo.png'
 import UKFlag from '../assets/en.png' 
 import FranceFlag from '../assets/fr.png'
+import { CoinContext } from '../api/CoinContext'
+import { useTranslation } from 'react-i18next'
 
 const Navbar = () => {
 
@@ -48,9 +50,9 @@ const Navbar = () => {
       </h1>
 
       <div className='flex flex-grow justify-center text-xl text-violet-800 space-x-10'>
-        <Link to="/about" className='hover:text-orange-400'>{t('about')}</Link>
-        <Link to="/services" className='hover:text-orange-400'>{t('services')}</Link>
-        <Link to="/contact" className='hover:text-orange-400'>{t('contact')}</Link>
+        <Link to="/about" className='hover:text-orange-400'>{t('About')}</Link>
+        <Link to="/services" className='hover:text-orange-400'>{t('Services')}</Link>
+        <Link to="/contact" className='hover:text-orange-400'>{t('Contact')}</Link>
       </div>
       <div>
         <select onChange={currencyHandler} className='px-1 py-1 border bg-white rounded-lg bg-gradient shadow-md mr-7'>
