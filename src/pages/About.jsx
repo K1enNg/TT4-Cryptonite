@@ -14,12 +14,6 @@ const About = () => {
           offering key market insights and tools to help traders and enthusiasts make informed decisions.
         </p>
 
-        <h2 className="text-2xl text-violet-800 font-semibold mt-8 mb-3 border-b pb-2">Key Features</h2>
-        <ul className="text-lg mb-6 list-disc pl-5">
-          <li>Real-Time Market Data: Live prices, trends, and historical data for various cryptocurrencies.</li>
-          <li>Watchlist Functionality: Users can bookmark specific cryptocurrencies for easy tracking.</li>
-        </ul>
-
         <h2 className="text-2xl text-violet-800 font-semibold mt-8 mb-3 border-b pb-2">What is Cryptocurrency?</h2>
         <p className="text-lg mb-6 leading-relaxed">
           Cryptocurrency is a form of digital money that operates independently of traditional banks. Unlike physical cash, it exists purely in digital form and relies on blockchain technology to ensure security and transparency.
