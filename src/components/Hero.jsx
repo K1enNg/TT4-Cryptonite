@@ -4,7 +4,7 @@ import { HERO_CONTENT, HERO_HEADER } from '../contexts'
 const Hero = () => {
   return (
     <div className="flex flex-col items-center justify-center text-center mt-[-40px]">
-      <h1 className="text-6xl font-extrabold text-amber-50 mb-6 drop-shadow-lg animate-fadeIn">
+      <h1 className="text-5xl font-extrabold text-amber-50 mb-6 drop-shadow-lg animate-fadeIn">
         {HERO_HEADER}
       </h1>
 
