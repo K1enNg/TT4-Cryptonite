@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   WHAT_IS_CRYPTO_HEADER,
   WHAT_IS_CRYPTO_CONTENT,
@@ -19,10 +20,14 @@ import {
   CONCLUSION_CONTENT,
 } from "../contexts/indexAbout";
 
+import "../i18n";
+
+
 const About = () => {
   return (
     <div className="flex flex-col items-center w-full p-6 text-white">
       <div className="max-w-3xl">
+
         <h1 className="text-4xl text-violet-800 font-bold mb-6 text-center">
           Welcome to <span className="text-orange-400">Cryptonite</span>
         </h1>
@@ -85,9 +90,13 @@ const About = () => {
           <h2 className="text-2xl font-semibold text-violet-800">{CONCLUSION_HEADER}</h2>
           <p className="text-lg">{CONCLUSION_CONTENT}</p>
         </section>
+
       </div>
     </div>
   );
 };
 
+
+
 export default About;
+
