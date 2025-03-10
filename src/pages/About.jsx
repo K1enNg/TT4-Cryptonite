@@ -36,7 +36,7 @@ const About = () => {
       <div className="max-w-3xl">
 
         <h1 className="text-4xl text-violet-800 font-bold mb-6 text-center">
-          {t('AboutTitle')} <span className="text-orange-400">Cryptonite</span>
+          {t('AboutTitle1')} <span className="text-orange-400">Cryptonite</span>
         </h1>
 
         <section>
