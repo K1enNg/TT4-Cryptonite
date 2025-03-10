@@ -1,52 +1,78 @@
-# Introduction to Cryptocurrency Market Web Application
+# Introduction to Cryptonite
 
 ## Project Overview
 
-Our cryptocurrency market web application aims to provide users with comprehensive and up-to-date information on the rapidly evolving cryptocurrency market. Designed with a user-friendly interface, this platform offers key market insights and tools to help traders and enthusiasts make informed decisions.
+Cryptonite is a gateway to understanding the world of cryptocurrency. It provides the insights and tools needed for beginner and advanced traders alike to navigate a rapidly evolving market.
+**Note:** Cryptonite is an informational platform only. It does not support cryptocurrency transactions (buying or selling).  
+
+---
 
 ## Key Features
 
-- **Real-Time Market Data:** Get up-to-the-minute prices, trends, and historical data for a wide range of cryptocurrencies.
-- **Watchlist Functionality:** Easily keep tabs on your favorite cryptocurrencies by adding them to your watchlist.
+### Real-Time Market Data  
+- Live cryptocurrency prices, percentage changes, and historical data.  
+- Market trends and insights to help users make informed decisions.  
 
-## APIs Used
+### Watchlist Functionality  
+- Users can bookmark specific cryptocurrencies for easy tracking.  
+- Secure watchlist storage using **MongoDB**.  
 
-- **CoinGecko API:** We use the CoinGecko API to pull in real-time market data such as prices, market caps, and historical trends. It's reliable and updates frequently, so you're always in the know.
+### Market Insights & Analytics  
+- Trading volume, market cap, and historical trends.  
+- Interactive graphs and charts for visualizing market movements.  
 
-## Core Purpose
-
-Our main goal is to keep you informed. This app is all about providing valuable data—it’s not a trading platform, but a powerful information resource to help you understand market dynamics.
+---
 
 ## Tech Stack
 
-### Frontend
-- **React + Vite Setup**
-  - This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-  - **Vite Plugins for React**:
-    - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) which uses [Babel](https://babeljs.io/) for Fast Refresh.
-    - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) which uses [SWC](https://swc.rs/) for Fast Refresh.
-- **TailwindCSS for responsive design**
+| Layer         | Technology Used |
+|--------------|----------------|
+| **Frontend**  | React, TailwindCSS |
+| **Backend**   | Node.js, Express.js |
+| **Database**  | MongoDB |
+| **API**       | CoinGecko API |
 
-### Backend
-- **Node.js with Express.js for handling API requests and data delivery**
+---
 
-### Database
-- **MongoDB for storing user authentication and watchlist data**
+## API Integration 
 
-### API Integration
-- **Real-time data fetched using the robust CoinGecko API**
+### **CoinGecko API**  
+Cryptonite leverages the **CoinGecko API** to fetch accurate and up-to-date cryptocurrency market data, including:  
+✅ Prices  
+✅ Market caps  
+✅ Historical trends  
 
-## User Experience and Design
+---
 
-We've focused on creating a straightforward and engaging user interface. When we show you this platform at our next presentation, you’ll see just how intuitive and easy it is to navigate.
+## 🛠 Planned Features  
 
-## Conclusion
+### 1️⃣ Core Features  
+- **Real-Time Market Data**: Live prices, trends, and historical price charts.  
+- **Watchlist**: Bookmark and track favorite cryptocurrencies.  
+- **Market Insights & Analytics**: Trading volume, market cap, and interactive data visualization.  
 
-By merging state-of-the-art tech with user-centered design, we’ve crafted a responsive and feature-packed web application tailored for anyone keen on the cryptocurrency market. Our platform equips you with the insights you need to navigate through the volatile crypto world.
+### 2️⃣ UI/UX Enhancements  
+- **Responsive Design**: Mobile-friendly interface with TailwindCSS.  
+- **Search & Filter**: Quick cryptocurrency lookup and filtering by market trends.  
 
-## Note
+### 3️⃣ API Integration  
+- **CoinGecko API**: Fetch market data, including prices, market caps, and trends.  
 
-- **Developers:** Christian Denis Marcelin, Jhalil Danilo Roman Soria, Sarah Leventon, Trung Kien Nguyen, Yunxian Xu
-- **Installation Instructions:** Just download the whole project and open it in Visual Studio to get started.
-- **Contributions:** We're all set for now, so no need for additional contributions.
+### 4️⃣ Authentication & User Features  
+- **User Authentication**: Secure login and registration with JWT.  
+- **Personalized Dashboard**: Users can manage watchlists and access saved insights.  
+
+### 5️⃣ Backend & Database  
+- **Node.js + Express.js**: Efficient API request handling.  
+- **MongoDB Database**: Persistent storage for user preferences and watchlists.  
+
+---
+
+## Developers 
+- **Christian Denis Marcelin**  
+- **Trung Kien Nguyen**  
+- **Yunxian Xu**  
+- **Jhalil Danilo Roman Soria**  
+- **Sarah Leventon**  
+
 
