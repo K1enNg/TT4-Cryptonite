@@ -1,4 +1,4 @@
-export default services = [
+const services = [
     {
       name: "Market Analysis",
       description: "Detailed analysis of current market trends.",
@@ -12,3 +12,5 @@ export default services = [
       description: "Learn about cryptocurrency and market dynamics.",
     },
   ];
+
+  export default services;

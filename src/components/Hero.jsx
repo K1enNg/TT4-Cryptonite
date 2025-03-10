@@ -1,7 +1,7 @@
 import React from 'react'
 import { HERO_CONTENT, HERO_HEADER } from '../contexts/hero'
 
-const Hero = () => {
+const Hero = ({ onGetStarted }) => {
   return (
     <div className="flex flex-col items-center justify-center text-center mt-[-40px]">
       <h1 className="text-5xl font-extrabold text-amber-50 mb-6 drop-shadow-lg animate-fadeIn">
@@ -12,7 +12,10 @@ const Hero = () => {
         {HERO_CONTENT}
       </p>
 
-      <button className="mt-8 px-6 py-3 bg-orange-400 text-violet-900 rounded-lg text-lg font-semibold hover:bg-orange-500 transition transform hover:scale-105">
+      <button 
+        onClick={onGetStarted}
+        className="mt-8 px-6 py-3 bg-orange-400 text-violet-900 rounded-lg text-lg font-semibold hover:bg-orange-500 transition transform hover:scale-105"
+      >
         Get Started
       </button>
     </div>

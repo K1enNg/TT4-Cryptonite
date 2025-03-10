@@ -1,6 +1,6 @@
 // ServiceList.js
 import React from "react";
-import {services} from "../../contexts/service"
+import services from "../../contexts/service.js"
 
 
 const ServiceList = () => {
