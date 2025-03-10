@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center w-full p-6 text-white">
+    <div className="flex flex-col items-center w-full p-6 text-white mt-[-40px]">
       <div className="max-w-3xl">
         <h1 className="text-4xl text-violet-800 font-bold mb-6 text-center">
           Welcome to <span className='text-orange-400'>Cryptonite</span>
