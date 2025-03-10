@@ -18,7 +18,7 @@ import {
   RISKS_LIST,
   CONCLUSION_HEADER,
   CONCLUSION_CONTENT,
-} from "../contexts/indexAbout";
+} from "../contexts/about";
 
 import "../i18n";
 

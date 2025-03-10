@@ -1,8 +1,8 @@
 // Service.jsx
 import React from "react";
-import Hero from "../components/Hero"; // 确保路径正确
-import SectionHeading from "./SectionHeading";
-import ServiceList from "./ServiceList";
+import Hero from "../components/Hero";
+import SectionHeading from "../components/Service/SectionHeading";
+import ServiceList from "../components/Service/ServiceList";
 
 const Service = () => {
   return (
@@ -21,8 +21,6 @@ const Service = () => {
           />
         </div>
       </div>
-
-      <Hero />
     </div>
   );
 };
