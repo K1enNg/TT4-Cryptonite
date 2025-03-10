@@ -1,5 +1,5 @@
 import React from 'react'
-import { HERO_CONTENT, HERO_HEADER } from '../contexts'
+import { HERO_CONTENT, HERO_HEADER } from '../contexts/hero'
 
 const Hero = () => {
   return (
