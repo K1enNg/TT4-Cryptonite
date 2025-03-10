@@ -1,15 +1,18 @@
 import React from 'react'
 import { HERO_CONTENT, HERO_HEADER } from '../contexts/hero'
+import { useTranslation } from "react-i18next";
+import "../utils/i18n";
 
 const Hero = ({ onGetStarted }) => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center justify-center text-center mt-[-40px]">
       <h1 className="text-5xl font-extrabold text-amber-50 mb-6 drop-shadow-lg animate-fadeIn">
-        {HERO_HEADER}
+        {t('HERO_HEADER')}
       </h1>
 
       <p className="text-lg text-amber-100 max-w-2xl leading-relaxed px-4 animate-slideUp">
-        {HERO_CONTENT}
+        {t('HERO_CONTENT')}
       </p>
 
       <button 
@@ -19,6 +22,8 @@ const Hero = ({ onGetStarted }) => {
         Get Started
       </button>
     </div>
+
+    
   )
 }
 
