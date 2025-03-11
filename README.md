@@ -8,14 +8,13 @@ Cryptonite is a gateway to understanding the world of cryptocurrency. It provide
 ---
 
 ## Key Features
+- **Real-Time Market Data:** Get up-to-the-minute prices, trends, and historical data for a wide range of cryptocurrencies.
 
+  
 ### Real-Time Market Data  
 - Live cryptocurrency prices, percentage changes, and historical data.  
 - Market trends and insights to help users make informed decisions.  
 
-### Watchlist Functionality  
-- Users can bookmark specific cryptocurrencies for easy tracking.  
-- Secure watchlist storage using **MongoDB**.  
 
 ### Market Insights & Analytics  
 - Trading volume, market cap, and historical trends.  
@@ -28,8 +27,8 @@ Cryptonite is a gateway to understanding the world of cryptocurrency. It provide
 | Layer         | Technology Used |
 |--------------|----------------|
 | **Frontend**  | React, TailwindCSS |
-| **Backend**   | Node.js, Express.js |
-| **Database**  | MongoDB |
+| **Backend**   | Node.js |
+| **Database**  | *None* |
 | **API**       | CoinGecko API |
 
 ---
@@ -58,11 +57,7 @@ Cryptonite leverages the **CoinGecko API** to fetch accurate and up-to-date cryp
 ### 3️⃣ API Integration  
 - **CoinGecko API**: Fetch market data, including prices, market caps, and trends.  
 
-### 4️⃣ Authentication & User Features  
-- **User Authentication**: Secure login and registration with JWT.  
-- **Personalized Dashboard**: Users can manage watchlists and access saved insights.  
-
-### 5️⃣ Backend & Database  
+### 4️⃣ Backend & Database  
 - **Node.js + Express.js**: Efficient API request handling.  
 - **MongoDB Database**: Persistent storage for user preferences and watchlists.  
 
