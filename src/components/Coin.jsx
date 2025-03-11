@@ -5,6 +5,19 @@ import { CoinContext } from '../api/CoinContext'
 const Coin = () => {
   const { coins, currency } = useContext(CoinContext)
   const [displayCoin, setDisplayCoin] = useState([])
+  const [input, setInput] = useState("")
+
+  const handleInput = (e) => {
+    setInput(e.target.value)
+  }
+
+  const handleSearch = async (e) => {
+    e.preventDefault()
+    const coin = await coins.filter((item) => {
+      return item.name.toLowerCase().includes(input.toLowerCase())
+    })
+    setDisplayCoin(coin)
+  }
 
   useEffect(() => {
     setDisplayCoin(coins)
@@ -16,8 +29,10 @@ const Coin = () => {
         type="text"
         placeholder="Search for a coin..."
         className="mb-4 p-2 w-1/2 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-orange-400 text-amber-50"
+        onSubmit={handleSearch} value={input} onChange={handleInput}
       />
-      <table className="mt-10 w-full text-left border-collapse border border-gray-200">
+      <button onClick={handleInput} className=" bg-orange-400 text-white px-4 py-2 rounded-lg">Search</button>
+      <table className="mt-10 w-full text-left border-collapse border border-gray-200" onSubmit={handleInput}>
         <thead className="bg-gradient-to-bl-700 text-white">
           <tr>
             <th className="p-3 border border-gray-300">#</th>
@@ -29,7 +44,7 @@ const Coin = () => {
         </thead>
         <tbody>
           {Array.isArray(displayCoin) && displayCoin.map((coin) => (
-            <tr key={coin.id} className="hover:bg-gray-100">
+            <tr key={coin.id}>
               <td className="p-3 border border-gray-300 text-gray-300">{coin.market_cap_rank}</td>
               <td className="p-3 border border-gray-300">
                 <div className="flex items-center">
