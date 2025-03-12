@@ -47,26 +47,34 @@ const Coin = () => {
         </thead>
         <tbody>
           {Array.isArray(displayCoin) && displayCoin.map((coin) => (
-            <tr key={coin.id}>
-              <Link to={`/coin/${coin.id}`} >
-              <td className="p-3 border border-gray-300 text-gray-300">{coin.market_cap_rank}</td>
+            <tr key={coin.id} className="cursor-pointer hover:bg-gray-800">
               <td className="p-3 border border-gray-300">
-                <div className="flex items-center">
+                <Link to={`/coin/${coin.id}`} className="text-gray-300">
+                  {coin.market_cap_rank}
+                </Link>
+              </td>
+              <td className="p-3 border border-gray-300">
+                <Link to={`/coin/${coin.id}`} className="flex items-center">
                   <img src={coin.image} alt={coin.name} className="w-6 h-6 mr-2" />
                   <span className="text-gray-300">{coin.name}</span>
                   <span className="text-gray-300 ml-2">({coin.symbol.toUpperCase()})</span>
-                </div>
+                </Link>
               </td>
-              <td className="p-3 border border-gray-300 text-gray-300">
-                {currency.symbol}{coin.current_price.toLocaleString()}
+              <td className="p-3 border border-gray-300">
+                <Link to={`/coin/${coin.id}`} className="text-gray-300">
+                  {currency.symbol}{coin.current_price.toLocaleString()}
+                </Link>
               </td>
-              <td className={`p-3 border border-gray-300 ${coin.price_change_percentage_24h > 0 ? 'text-green-500' : 'text-red-500'}`}>
-                {coin.price_change_percentage_24h.toFixed(2)}%
+              <td className="p-3 border border-gray-300">
+                <Link to={`/coin/${coin.id}`} className={coin.price_change_percentage_24h > 0 ? 'text-green-500' : 'text-red-500'}>
+                  {coin.price_change_percentage_24h.toFixed(2)}%
+                </Link>
               </td>
-              <td className="p-3 border border-gray-300 text-gray-300">
-                {currency.symbol}{coin.market_cap.toLocaleString()}
+              <td className="p-3 border border-gray-300">
+                <Link to={`/coin/${coin.id}`} className="text-gray-300">
+                  {currency.symbol}{coin.market_cap.toLocaleString()}
+                </Link>
               </td>
-              </Link>
             </tr>
           ))}
         </tbody>
