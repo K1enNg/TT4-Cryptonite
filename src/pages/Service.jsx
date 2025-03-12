@@ -1,8 +1,8 @@
 // Service.jsx
 import React from "react";
-import Hero from "../components/Hero"; // 确保路径正确
-import SectionHeading from "./SectionHeading";
-import ServiceList from "./ServiceList";
+import SectionHeading from "../components/Service/SectionHeading";
+import ServiceList from "../components/Service/ServiceList";
+import Image from "../assets/service1.jpg";
 
 const Service = () => {
   return (
@@ -15,14 +15,12 @@ const Service = () => {
         <ServiceList />
         <div>
           <img
-            src="/Images/ServiceImage1.jpg"
+            src={Image}
             alt="Service Visual Representation"
             className="w-2/3 h-2/3"
           />
         </div>
       </div>
-
-      <Hero />
     </div>
   );
 };

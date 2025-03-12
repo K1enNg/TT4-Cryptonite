@@ -3,11 +3,18 @@ import Hero from '../components/Hero'
 import Coin from '../components/Coin'
 
 const Homepage = () => {
+  const [showCoin, setShowCoin] = useState(false);
+  const [showHero, setShowHero] = useState(true);
+
+  const handleGetStarted = () => {
+    setShowCoin(true);
+    setShowHero(false);
+  };
 
   return (
     <>
-      {/* <Hero /> */}
-      <Coin />
+      {showHero && <Hero onGetStarted={handleGetStarted} />}
+      {showCoin && <Coin />}
     </>
   )
 }
