@@ -29,10 +29,11 @@ const Coin = () => {
         type="text"
         placeholder="Search for a coin..."
         className="mb-4 p-2 w-1/2 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-orange-400 text-amber-50"
-        onSubmit={handleSearch} value={input} onChange={handleInput}
+        onChange={handleInput}
+        value={input} 
       />
       <button onClick={handleInput} className=" bg-orange-400 text-white px-4 py-2 rounded-lg">Search</button>
-      <table className="mt-10 w-full text-left border-collapse border border-gray-200" onSubmit={handleInput}>
+      <table className="mt-10 w-full text-left border-collapse border border-gray-200" onSubmit={handleSearch}>
         <thead className="bg-gradient-to-bl-700 text-white">
           <tr>
             <th className="p-3 border border-gray-300">#</th>
