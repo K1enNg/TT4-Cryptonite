@@ -49,7 +49,7 @@ const Navbar = () => {
         </Link>
       </h1>
 
-      <div className="flex flex-grow justify-center text-xl text-violet-800 space-x-10">
+      <div className="flex flex-grow justify-center text-xl text-violet-800 space-x-10 font-extrabold">
         <Link to="/about" className="hover:text-orange-400">
           {t("About")}
         </Link>
@@ -63,7 +63,7 @@ const Navbar = () => {
       <div>
         <select
           onChange={currencyHandler}
-          className="px-1 py-1 border bg-white rounded-lg bg-gradient shadow-md mr-7"
+          className="px-1 py-1 border bg-black text-white rounded-lg bg-gradient shadow-md mr-7"
         >
           <option value="usd">USD</option>
           <option value="eur">EUR</option>
