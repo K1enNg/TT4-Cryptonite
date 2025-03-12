@@ -33,7 +33,7 @@ const Coin = () => {
           className="mb-4 p-2 w-1/2 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-orange-400 text-amber-50"
           value={input} onChange={handleInput}
         />
-        <button type="submit" className="bg-orange-400 text-white px-4 py-2 rounded-lg">Search</button>
+        <button type="submit" className="bg-orange-400 text-white px-4 py-2 rounded-lg transition transform hover:scale-105">Search</button>
       </form>
       <table className="mt-10 w-full text-left border-collapse border border-gray-200" onSubmit={handleSearch}>
         <thead className="bg-gradient-to-bl-700 text-white">
@@ -45,11 +45,10 @@ const Coin = () => {
             <th className="p-3 border border-gray-300">Market Cap</th>
           </tr>
         </thead>
-        
         <tbody>
           {Array.isArray(displayCoin) && displayCoin.map((coin) => (
             <tr key={coin.id}>
-              <Link to={`/coin/${coin.id}`}>
+              <Link to={`/coin/${coin.id}`} >
               <td className="p-3 border border-gray-300 text-gray-300">{coin.market_cap_rank}</td>
               <td className="p-3 border border-gray-300">
                 <div className="flex items-center">
