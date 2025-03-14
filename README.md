@@ -28,7 +28,6 @@ Cryptonite is a gateway to understanding the world of cryptocurrency. It provide
 |--------------|----------------|
 | **Frontend**  | React, TailwindCSS |
 | **Backend**   | Node.js |
-| **Database**  | *None* |
 | **API**       | CoinGecko API |
 
 ---
@@ -56,10 +55,6 @@ Cryptonite leverages the **CoinGecko API** to fetch accurate and up-to-date cryp
 
 ### 3️⃣ API Integration  
 - **CoinGecko API**: Fetch market data, including prices, market caps, and trends.  
-
-### 4️⃣ Backend & Database  
-- **Node.js + Express.js**: Efficient API request handling.  
-- **MongoDB Database**: Persistent storage for user preferences and watchlists.  
 
 ---
 
