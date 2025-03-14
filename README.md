@@ -49,9 +49,9 @@ src/
 │   ├── Service.jsx            # Services section component
 ├── pages/
 │   ├── Homepage.jsx           # Home page
-│   ├── About.jsx             # About page
-│   ├── Contact.jsx           # Contact page
-│   └── Service.jsx           # Services page
+│   ├── About.jsx              # About page
+│   ├── Contact.jsx            # Contact page
+│   └── Service.jsx            # Services page
 ├── utils/                     # i18n for web translation
 ├── App.jsx                    # Project router 
 └── main.jsx                   # Application entry point
