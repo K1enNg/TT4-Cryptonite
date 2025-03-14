@@ -32,6 +32,31 @@ Cryptonite is a gateway to understanding the world of cryptocurrency. It provide
 
 ---
 
+## Structure
+
+```
+src/
+├── api/
+│   ├── CoinContext.jsx        # Context provider for coin data
+│   └── CoinDetail.jsx         # API calls for detailed coin information
+├── assets/                    # Static assets (images, icons, etc.)
+├── components/
+│   ├── Coin.jsx               # Main coin listing component
+│   ├── CoinDetail.jsx         # Detailed view of a single coin
+│   ├── Hero.jsx               # Hero section component
+│   ├── Layout.jsx             # Main layout wrapper component
+│   ├── Navbar.jsx             # Navigation bar component
+│   ├── Service.jsx            # Services section component
+├── pages/
+│   ├── Homepage.jsx           # Home page
+│   ├── About.jsx             # About page
+│   ├── Contact.jsx           # Contact page
+│   └── Service.jsx           # Services page
+├── utils/                     # i18n for web translation
+├── App.jsx                    # Project router 
+└── main.jsx                   # Application entry point
+```
+
 ## API Integration 
 
 ### **CoinGecko API**  
