@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { CoinContext } from '../api/CoinContext';
+import { CoinContext } from './CoinContext';
 
 
 const CoinDetail = () => {
@@ -10,36 +10,29 @@ const CoinDetail = () => {
     const {currency} = useContext(CoinContext);
 
     const fetchCoinData = async () => {
-        const options = {
-            method: 'GET',
-            headers: {accept: 'application/json', 'x-cg-pro-api-key': 'CG-Tzy7YRtANQWBepEcy1CHJzLM'}
-          };
-
-          try {
-            const response = await fetch (
-                `https://api.coingecko.com/api/v3/coins/${coinId}`,
-                {
-                    ...options,
-                    mode: 'cors'
-                }
+        try {
+            const response = await fetch(
+                `https://api.coingecko.com/api/v3/coins/${coinId}`
             );
-
+    
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-
+    
             const data = await response.json();
             console.log('Fetched data:', data);
             setCoinData(data);
-
+    
         } catch (error) {
             console.error('Error fetching coins:', error);
         }       
     }
+    
 
     useEffect(() => {
         fetchCoinData();
-    }, [currency]);
+    }, [coinId, currency]);
+    
     
     
     return (

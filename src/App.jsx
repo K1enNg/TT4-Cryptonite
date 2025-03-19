@@ -4,7 +4,7 @@ import About from "./pages/About";
 import Service from "./pages/Service";
 import Contact from "./pages/Contact";
 import Layout from "./components/Layout";
-import CoinDetail from "./components/CoinDetail";
+import CoinDetail from "./api/CoinDetail";
 
 function App() {
   return (
