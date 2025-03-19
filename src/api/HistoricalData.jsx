@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import { CoinContext } from './CoinContext';
+import LineChart from '../components/LineChart';
 
-const HistoricalData = () => {
-    const {coinId} = useParams();
+const HistoricalData = ({coinId}) => {
     const [historicalData, setHistoricalData] = useState();
     const { currency } = useContext(CoinContext);
 
@@ -15,14 +15,14 @@ const HistoricalData = () => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-    
+
             const data = await response.json();
             console.log('Fetched data:', data);
             setHistoricalData(data);
-    
+
         } catch (error) {
             console.error('Error fetching coins:', error);
-        }       
+        }
     }
 
     useEffect(() => {
@@ -32,19 +32,10 @@ const HistoricalData = () => {
     return (
         <div>
             {historicalData ? (
-      <div>
-        <h2 className="text-lg font-bold mb-2">Historical Prices (last 10 days)</h2>
-        <ul>
-          {historicalData.prices.map(([timestamp, price]) => (
-            <li key={timestamp}>
-              {new Date(timestamp).toLocaleDateString()} — {price.toFixed(2)} {currency.name.toUpperCase()}
-            </li>
-          ))}
-        </ul>
-      </div>
-      ) : (
+                <LineChart historicalData={historicalData} />
+            ) : (
                 <div className="flex justify-center items-center h-20">
-                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-500"></div>
                 </div>
             )}
         </div>
