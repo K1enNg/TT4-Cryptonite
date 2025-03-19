@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CoinContext } from './CoinContext';
+import HistoricalData from './HistoricalData';
 
 
 const CoinDetail = () => {
@@ -42,6 +43,7 @@ const CoinDetail = () => {
                     <img src={coinData.image.large} alt={coinData.name} />
                     <p>{coinData.name}</p>
                     <p>{coinData.symbol}</p>
+                    <HistoricalData />
                 </div>
             ) : (
                 <div className="flex justify-center items-center h-20">
