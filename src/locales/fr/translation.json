@@ -1,6 +1,48 @@
 {
+  "WHAT_IS_CRYPTO_HEADER": "Qu'est-ce que la cryptomonnaie ?",
+  "WHAT_IS_CRYPTO_CONTENT": "La cryptomonnaie est une forme de monnaie numérique qui fonctionne indépendamment des banques traditionnelles. Contrairement à l'argent liquide, elle existe uniquement sous forme numérique et repose sur la technologie blockchain pour garantir la sécurité et la transparence.",
+
+  "HOW_IT_WORKS_HEADER": "Comment ça fonctionne ?",
+  "HOW_IT_WORKS_CONTENT": "Les cryptomonnaies fonctionnent sur des réseaux décentralisés alimentés par la technologie blockchain. Chaque transaction est enregistrée sur un registre distribué, ce qui la rend sécurisée, transparente et pratiquement impossible à modifier.",
+
+  "POPULAR_CRYPTO_HEADER": "Cryptomonnaies populaires",
+  "POPULAR_CRYPTO_LIST": [
+    { "title": "Bitcoin (BTC)", "description": "La première et la plus connue des cryptomonnaies, créée par Satoshi Nakamoto en 2009." },
+    { "title": "Ethereum (ETH)", "description": "Une blockchain permettant les contrats intelligents et les applications décentralisées (DApps)." },
+    { "title": "Binance Coin (BNB)", "description": "Un jeton utilitaire pour la plateforme Binance avec de multiples cas d'utilisation." },
+    { "title": "Solana (SOL)", "description": "Connue pour sa rapidité et sa scalabilité dans le traitement des transactions." }
+  ],
+
+  "BLOCKCHAIN_HEADER": "Qu'est-ce que la blockchain ?",
+  "BLOCKCHAIN_CONTENT": "Une blockchain est un registre numérique décentralisé qui enregistre les transactions sur de nombreux ordinateurs. Cela empêche toute falsification et garantit la transparence, faisant d'elle la base de toutes les cryptomonnaies.",
+
+  "STORAGE_HEADER": "Comment stocker des cryptomonnaies ?",
+  "STORAGE_CONTENT": "Les cryptomonnaies sont stockées dans des portefeuilles numériques. Il en existe deux types principaux :",
+  "STORAGE_LIST": [
+    { "title": "Portefeuilles chauds", "description": "Connectés à Internet, faciles d'accès mais vulnérables aux piratages." },
+    { "title": "Portefeuilles froids", "description": "Stockage hors ligne (comme les portefeuilles matériels) offrant une sécurité accrue." }
+  ],
+
+  "BUY_CRYPTO_HEADER": "Comment acheter des cryptomonnaies ?",
+  "BUY_CRYPTO_CONTENT": "Acheter des cryptomonnaies est simple. Vous pouvez utiliser des plateformes comme Binance, Coinbase ou Kraken pour acheter des cryptos avec de l'argent traditionnel (fiat). Une fois achetées, stockez vos actifs en toute sécurité dans un portefeuille.",
+
+  "RISKS_HEADER": "Risques et considérations",
+  "RISKS_LIST": [
+    { "title": "Volatilité", "description": "Les prix des cryptomonnaies peuvent fluctuer considérablement." },
+    { "title": "Sécurité", "description": "Les arnaques et les piratages sont fréquents - utilisez toujours des portefeuilles sécurisés." },
+    { "title": "Réglementation", "description": "Les gouvernements peuvent introduire des lois impactant les marchés des cryptomonnaies." }
+  ],
+
+  "CONCLUSION_HEADER": "Conclusion",
+  "CONCLUSION_CONTENT": "Les cryptomonnaies révolutionnent la finance en offrant un moyen de transaction décentralisé, sans frontières et transparent. En comprenant les fondamentaux, vous pouvez prendre des décisions éclairées sur l'investissement et la participation à cette économie numérique passionnante.",
+
+  "HERO_HEADER": "Cryptonite – Restez en tête du marché de la cryptomonnaie",
+  "HERO_CONTENT": "Dans le monde rapide des cryptomonnaies, rester informé des tendances du marché est essentiel pour prendre des décisions d'investissement intelligentes. Cryptonite est une application web puissante conçue pour fournir des informations en temps réel, des analyses et le suivi des tendances pour diverses cryptomonnaies.",
+
+
   "Services": "Services",
   "About": "À propos",
-  "Contact": "Nous contacter",
-  "AboutTitle": "Bienvenue a cryptonite"
+  "Contact": "Contact",
+  "AboutTitle1": "Bienvenue sur",
+  "AboutTitle2": "Cryptonite"
 }

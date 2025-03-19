@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Service from "./pages/Service";
 import Contact from "./pages/Contact";
 import Layout from "./components/Layout";
+import CoinDetail from "./api/CoinDetail";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/" index element={<Homepage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/coin/:coinId" element={<CoinDetail />} />
         <Route path="/services" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
       </Route>
