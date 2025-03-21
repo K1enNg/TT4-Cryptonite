@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react'
 import { CoinContext } from './CoinContext';
 import LineChart from '../components/LineChart';
 
-const HistoricalData = ({coinId}) => {
+const HistoricalData = ({ coinId }) => {
     const [historicalData, setHistoricalData] = useState();
     const { currency } = useContext(CoinContext);
 
