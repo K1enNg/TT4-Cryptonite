@@ -23,6 +23,8 @@ import {
 } from "../contexts/about";
 
 import "../utils/i18n";
+import Logo from "../assets/logo.png";
+import Partnership from "../components/About/Partnership";
 
 
 const About = () => {
@@ -32,14 +34,27 @@ const About = () => {
   const risks_list = t('RISKS_LIST', { returnObjects: true });
 
   return (
-    <div className="flex flex-col items-center w-full p-6 text-white mt-[-40px]">
+
+    <div className="flex flex-col items-center w-full p-6 text-white mt-[-80px]">
       <div className="max-w-3xl">
+        <div>
+          <div className="flex justify-center">
+            <img src={Logo} alt="cryptonite-logo" />
+          </div>
+          <div>
+            <h1 className="text-6xl flex justify-center mt-[-20px] bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent font-serif">
+              Stay foolish. Stay broke.
+            </h1>
+          </div>
+        </div>
 
-        <h1 className="text-4xl text-violet-800 font-bold mb-6 text-center">
-          {t('AboutTitle1')} <span className="text-orange-400">Cryptonite</span>
-        </h1>
+        {/* <div className="my-6"></div> Added spacing */}
 
-        <section>
+        <div className="flex justify-center mt-[40px]">
+          <Partnership />
+        </div>
+
+        {/* <section>
           <h2 className="text-2xl font-semibold text-violet-800">{t('WHAT_IS_CRYPTO_HEADER')}</h2>
           <p className="text-lg">{t('WHAT_IS_CRYPTO_CONTENT')}</p>
         </section>
@@ -96,10 +111,10 @@ const About = () => {
         <section>
           <h2 className="text-2xl font-semibold text-violet-800">{t('CONCLUSION_HEADER')}</h2>
           <p className="text-lg">{t('CONCLUSION_CONTENT')}</p>
-        </section>
+        </section> */}
 
       </div>
-    </div>
+    </div >
   );
 };
 
