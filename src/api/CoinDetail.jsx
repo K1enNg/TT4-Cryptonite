@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CoinContext } from './CoinContext';
 import HistoricalData from './HistoricalData';
+import LazyLoading from '../components/LazyLoading';
 
 
 const CoinDetail = () => {
@@ -77,9 +78,7 @@ const CoinDetail = () => {
                 </div>
 
             ) : (
-                <div className="flex justify-center items-center h-20">
-                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-                </div>
+                <LazyLoading />
             )}
         </div>
     )

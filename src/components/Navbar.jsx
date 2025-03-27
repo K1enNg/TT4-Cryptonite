@@ -49,14 +49,14 @@ const Navbar = () => {
         </Link>
       </h1>
 
-      <div className="flex flex-grow justify-center text-xl text-violet-800 space-x-10 font-extrabold">
-        <Link to="/about" className="hover:text-orange-400">
+      <div className="flex flex-grow justify-center text-xl bg-gradient-to-r from-white to-gray-600 bg-clip-text text-transparent space-x-10 font-extrabold">
+        <Link to="/about">
           {t("About")}
         </Link>
-        <Link to="/services" className="hover:text-orange-400">
+        <Link to="/services">
           {t("Services")}
         </Link>
-        <Link to="/contact" className="hover:text-orange-400">
+        <Link to="/contact">
           {t("Contact")}
         </Link>
       </div>
@@ -73,7 +73,7 @@ const Navbar = () => {
       <div className="mr-8 flex items-center">
         <button
           onClick={toggleLanguage}
-          className="flex items-center gap-2 px-4 py-2 border bg-violet-800 rounded-lg bg-gradient shadow-md hover:bg-orange-400 transition"
+          className="flex items-center gap-2 px-4 py-2 border bg-gradient-to-r from-white to-gray-600 rounded-lg bg-gradient shadow-md hover:bg-orange-400 transition"
         >
           <img
             src={language === "en" ? UKFlag : FranceFlag}
