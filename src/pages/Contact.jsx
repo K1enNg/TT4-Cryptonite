@@ -48,7 +48,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-black to-violet-800 text-white py-3 rounded-lg text-lg font-semibold tracking-wide shadow-md hover:opacity-90 transition duration-300"
+            className="w-full bg-gradient-to-r from-yellow-200 to-yellow-500 text-white py-3 rounded-lg text-lg font-semibold tracking-wide shadow-md hover:opacity-90 transition duration-300"
           >
             {CONTACT_BUTTON_TEXT}
           </button>

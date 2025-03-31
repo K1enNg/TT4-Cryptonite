@@ -9,7 +9,7 @@ const ServiceList = () => {
       {services.map((service, index) => (
         <div
           key={index}
-          className="bg-purple-600 text-white p-4 rounded-lg shadow"
+          className="text-white p-4 rounded-lg shadow"
         >
           <h2 className="text-lg font-bold">{service.name}</h2>
           <p>{service.description}</p>
