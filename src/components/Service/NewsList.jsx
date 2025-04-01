@@ -1,10 +1,10 @@
-// ServiceList.js
 import React from "react";
 import NewsItem from "./NewsItem";
+import LazyLoading from "../LazyLoading";
 
 const NewsList = ({ news = [] }) => {
   if (!news.length) {
-    return <p>No news available.</p>;
+    return;
   }
   return (
     <ul>
