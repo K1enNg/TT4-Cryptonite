@@ -39,3 +39,6 @@ export const RISKS_LIST = [
 export const CONCLUSION_HEADER = "Conclusion";
 export const CONCLUSION_CONTENT =
   "Cryptocurrency is revolutionizing finance by offering a decentralized, borderless, and transparent way to transact. By understanding the fundamentals, you can make informed decisions about investing and participating in this exciting digital economy.";
+
+
+ export const SLOGAN_ABOUT = "Stay Foolish. Stay Broke";
