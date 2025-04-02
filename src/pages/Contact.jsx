@@ -5,9 +5,15 @@ import {
   CONTACT_FIELDS, 
   CONTACT_BUTTON_TEXT } 
 from "../contexts/contact";
+import emailjs from '@emailjs/browser';
 
 
 const Contact = () => {
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_afj8cbp', 'template_qoxmt7y', e.target, '_1ABS6fA6XBGSa1r0')
+  }
   return (
     <div className="flex flex-col items-center w-full p-6 mt-[-80px]">
       <div className="w-full max-w-lg rounded-2xl shadow-xl p-8 text-white">
@@ -16,7 +22,7 @@ const Contact = () => {
         </h2>
         <p className="text-center mb-6">{CONTACT_DESCRIPTION}</p>
 
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={sendEmail}>
           {CONTACT_FIELDS.map((field) => (
             <div key={field.name} className="space-y-2">
               <label className="block font-semibold">{field.label}</label>
@@ -42,7 +48,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-black to-violet-800 text-white py-3 rounded-lg text-lg font-semibold tracking-wide shadow-md hover:opacity-90 transition duration-300"
+            className="w-full bg-gradient-to-r from-yellow-200 to-yellow-500 text-white py-3 rounded-lg text-lg font-semibold tracking-wide shadow-md hover:opacity-90 transition duration-300"
           >
             {CONTACT_BUTTON_TEXT}
           </button>
