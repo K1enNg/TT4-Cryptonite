@@ -46,5 +46,10 @@
   "AboutTitle1": "Bienvenue sur",
   "AboutTitle2": "Cryptonite",
 
-  "SLOGAN_ABOUT": "Reste ignorant. Reste fauché"
+  "SLOGAN_ABOUT": "Reste ignorant. Reste fauché",
+  "MISSION_STATS_ABOUT": "Notre mission",
+  "MISSION_STATS_BODY_ABOUT": "Donnez du pouvoir à votre parcours crypto – Informations en temps réel, investissements plus intelligents.",
+  "COUNTRIES_STATS_ABOUT": "Pays",
+  "USERS_STATS_ABOUT": "Utilisateurs",
+  "PARTNERSHIP_ABOUT" : "Partenaires"
 }

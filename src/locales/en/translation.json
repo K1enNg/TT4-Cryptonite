@@ -47,5 +47,10 @@
   "AboutTitle1": "Welcome to",
   "AboutTitle2": "Cryptonite",
 
-  "SLOGAN_ABOUT": "Stay foolish. Stay broke"
+  "SLOGAN_ABOUT": "Stay foolish. Stay broke",
+   "MISSION_STATS_ABOUT" : "Our Mission",
+  "MISSION_STATS_BODY_ABOUT" : "Empowering Your Crypto Journey – Real-Time Insights, Smarter Investments.",
+  "COUNTRIES_STATS_ABOUT" : "Countries",
+  "USERS_STATS_ABOUT" : "Users",
+  "PARTNERSHIP_ABOUT" : "Partnership"
 }
