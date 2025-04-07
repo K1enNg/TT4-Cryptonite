@@ -41,11 +41,11 @@ const Coin = () => {
       <table className="mt-10 w-full text-left border-collapse border border-gray-200">
         <thead className="bg-gradient-to-bl-700 text-white">
           <tr>
-            <th className="p-3 border border-gray-300">{t('table.rank')}</th>
-            <th className="p-3 border border-gray-300">{t('table.coins')}</th>
-            <th className="p-3 border border-gray-300">{t('table.price')}</th>
-            <th className="p-3 border border-gray-300">{t('table.change')}</th>
-            <th className="p-3 border border-gray-300">{t('table.marketCap')}</th>
+            <th className="p-3 border border-gray-300">#</th>
+            <th className="p-3 border border-gray-300">Coins</th>
+            <th className="p-3 border border-gray-300">Price</th>
+            <th className="p-3 border border-gray-300">24H Change</th>
+            <th className="p-3 border border-gray-300">Market Cap</th>
           </tr>
         </thead>
         <tbody>
