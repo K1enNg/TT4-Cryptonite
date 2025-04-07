@@ -1,15 +1,14 @@
 import express from 'express';
 import cors from 'cors';
-
+import { PORT, mongoDBURL } from './config';
 const app = express();
 
 app.use(cors());
 
-app.get('/api', (req, res) => {
-  res.json({ message: "Hello from Node!" });
+app.get('/', (req, res) => {
+    res.send('Welcome to the API!');
 });
 
-const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
