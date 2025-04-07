@@ -19,7 +19,7 @@ const Hero = ({ onGetStarted }) => {
         onClick={onGetStarted}
         className="mt-8 px-6 py-3 bg-gradient-to-r from-white to-gray-600 bg-clip-text text-transparent rounded-lg text-lg font-semibold hover:bg-orange-500 transition transform hover:scale-105"
       >
-        Get Started
+        {t('GETSTARTEDBTN')}
       </button>
     </div>
 
