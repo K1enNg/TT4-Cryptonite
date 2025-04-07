@@ -1,12 +1,13 @@
-import React from 'react'
-import { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CoinContext } from '../api/CoinContext'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Coin = () => {
   const { coins, currency } = useContext(CoinContext)
   const [displayCoin, setDisplayCoin] = useState([])
   const [input, setInput] = useState("")
+  const { t } = useTranslation();
 
   const handleInput = (e) => {
     setInput(e.target.value)
@@ -29,20 +30,22 @@ const Coin = () => {
       <form onSubmit={handleSearch} className="w-full flex flex-col items-center">
         <input
           type="text"
-          placeholder="Search for a coin..."
+          placeholder={t('search.placeholder')}
           className="mb-4 p-2 w-1/2 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-orange-400 text-amber-50"
           value={input} onChange={handleInput}
         />
-        <button type="submit" className="bg-gradient-to-r from-white to-gray-600  px-4 py-2 rounded-lg transition transform hover:scale-105">Search</button>
+        <button type="submit" className="bg-gradient-to-r from-white to-gray-600  px-4 py-2 rounded-lg transition transform hover:scale-105">
+          {t('search.button')}
+        </button>
       </form>
-      <table className="mt-10 w-full text-left border-collapse border border-gray-200" onSubmit={handleSearch}>
+      <table className="mt-10 w-full text-left border-collapse border border-gray-200">
         <thead className="bg-gradient-to-bl-700 text-white">
           <tr>
-            <th className="p-3 border border-gray-300">#</th>
-            <th className="p-3 border border-gray-300">Coins</th>
-            <th className="p-3 border border-gray-300">Price</th>
-            <th className="p-3 border border-gray-300">24H Change</th>
-            <th className="p-3 border border-gray-300">Market Cap</th>
+            <th className="p-3 border border-gray-300">{t('table.rank')}</th>
+            <th className="p-3 border border-gray-300">{t('table.coins')}</th>
+            <th className="p-3 border border-gray-300">{t('table.price')}</th>
+            <th className="p-3 border border-gray-300">{t('table.change')}</th>
+            <th className="p-3 border border-gray-300">{t('table.marketCap')}</th>
           </tr>
         </thead>
         <tbody>

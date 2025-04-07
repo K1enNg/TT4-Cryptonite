@@ -1,5 +1,3 @@
-
-
 {
   "WHAT_IS_CRYPTO_HEADER": "What is Cryptocurrency?",
   "WHAT_IS_CRYPTO_CONTENT": "Cryptocurrency is a form of digital money that operates independently of traditional banks. Unlike physical cash, it exists purely in digital form and relies on blockchain technology to ensure security and transparency.",
@@ -47,5 +45,38 @@
   "AboutTitle1": "Welcome to",
   "AboutTitle2": "Cryptonite",
 
-  "SLOGAN_ABOUT": "Stay foolish. Stay broke"
+  "SLOGAN_ABOUT": "Stay foolish. Stay broke",
+   "MISSION_STATS_ABOUT" : "Our Mission",
+  "MISSION_STATS_BODY_ABOUT" : "Empowering Your Crypto Journey – Real-Time Insights, Smarter Investments.",
+  "COUNTRIES_STATS_ABOUT" : "Countries",
+  "USERS_STATS_ABOUT" : "Users",
+  "PARTNERSHIP_ABOUT" : "Partnership",
+
+  "CONTACT_HEADER": "Contact us",
+  "CONTACT_DESCRIPTION": "Fill out the form below.",
+  "CONTACT_BUTTON_TEXT": "Send Message",
+  "CONTACT_FIELDS": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Your Name",
+      "placeholder": "Enter your name"
+    },
+    {
+      "name": "email",
+      "type": "email",
+      "label": "Your Email",
+      "placeholder": "Enter your email"
+    },
+    {
+      "name": "message",
+      "type": "textarea",
+      "label": "Your Message",
+      "placeholder": "Enter your message"
+    }
+  ],
+  "search": {
+    "placeholder": "Search for a coin...",
+    "button": "Search"
+  }
 }

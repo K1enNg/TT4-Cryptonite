@@ -42,3 +42,8 @@ export const CONCLUSION_CONTENT =
 
 
  export const SLOGAN_ABOUT = "Stay Foolish. Stay Broke";
+ export const MISSION_STATS_ABOUT = 'Our Mission';
+ export const MISSION_STATS_BODY_ABOUT = 'Empowering Your Crypto Journey – Real-Time Insights, Smarter Investments.';
+ export const COUNTRIES_STATS_ABOUT = 'Countries';
+ export const USERS_STATS_ABOUT = 'Users';
+ export const PARTNERSHIP_ABOUT = 'Partnership';

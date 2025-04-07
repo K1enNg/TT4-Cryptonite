@@ -46,5 +46,38 @@
   "AboutTitle1": "Bienvenue sur",
   "AboutTitle2": "Cryptonite",
 
-  "SLOGAN_ABOUT": "Reste ignorant. Reste fauché"
+  "SLOGAN_ABOUT": "Reste ignorant. Reste fauché",
+  "MISSION_STATS_ABOUT": "Notre mission",
+  "MISSION_STATS_BODY_ABOUT": "Donnez du pouvoir à votre parcours crypto – Informations en temps réel, investissements plus intelligents.",
+  "COUNTRIES_STATS_ABOUT": "Pays",
+  "USERS_STATS_ABOUT": "Utilisateurs",
+  "PARTNERSHIP_ABOUT" : "Partenaires",
+
+  "CONTACT_HEADER": "Contactez-nous",
+  "CONTACT_DESCRIPTION": "Vous avez des questions ou souhaitez en savoir plus ? Envoyez-nous un message et nous vous répondrons rapidement.",
+  "CONTACT_FIELDS": [
+    {
+      "label": "Nom complet",
+      "name": "user_name",
+      "type": "text",
+      "placeholder": "Entrez votre nom complet"
+    },
+    {
+      "label": "Email",
+      "name": "user_email",
+      "type": "email",
+      "placeholder": "Entrez votre adresse email"
+    },
+    {
+      "label": "Message",
+      "name": "message",
+      "type": "textarea",
+      "placeholder": "Écrivez votre message ici..."
+    }
+  ],
+  "CONTACT_BUTTON_TEXT": "Envoyer le message",
+  "search": {
+    "placeholder": "Rechercher une cryptomonnaie...",
+    "button": "Rechercher"
+  }
 }
