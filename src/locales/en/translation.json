@@ -76,5 +76,9 @@
       "label": "Your Message",
       "placeholder": "Enter your message"
     }
-  ]
+  ],
+  "search": {
+    "placeholder": "Search for a coin...",
+    "button": "Search"
+  }
 }

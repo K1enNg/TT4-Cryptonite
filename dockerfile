@@ -10,4 +10,4 @@ COPY /src ./src
 FROM base AS dev
 RUN npm run build
 
-CMD [ "npm", "/src" ]
+CMD [ "node", "/src" ]
