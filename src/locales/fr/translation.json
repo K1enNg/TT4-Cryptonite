@@ -75,5 +75,9 @@
       "placeholder": "Écrivez votre message ici..."
     }
   ],
-  "CONTACT_BUTTON_TEXT": "Envoyer le message"
+  "CONTACT_BUTTON_TEXT": "Envoyer le message",
+  "search": {
+    "placeholder": "Rechercher une cryptomonnaie...",
+    "button": "Rechercher"
+  }
 }
