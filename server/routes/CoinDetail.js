@@ -1,10 +1,14 @@
-import CoinDetail from '../models/CoinDetail.js';
+import express from 'express';
+import axios from 'axios';
+import CoinDetails from '../models/CoinDetails.js';
 
 const COINGECKO_API = 'https://api.coingecko.com/api/v3';
 
+const router = express.Router();
+
 const CACHE_DURATION = 15 * 60 * 1000; 
 
-router.get('/coins/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -33,3 +37,5 @@ router.get('/coins/:id', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch coin details' });
   }
 });
+
+export default router;

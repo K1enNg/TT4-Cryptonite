@@ -5,7 +5,7 @@ import CryptoMarketData from '../models/CryptoMarketData.js';
 const router = express.Router();
 const CACHE_DURATION = 15 * 60 * 1000; 
 
-router.get('/coins/markets', async (req, res) => {
+router.get('/', async (req, res) => {
   const { vs_currency = 'usd' } = req.query; 
 
   try {
