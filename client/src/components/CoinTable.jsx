@@ -3,7 +3,7 @@ import { CoinContext } from '../api/CoinContext'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-const Coin = () => {
+const CoinTable = () => {
   const { coins, currency } = useContext(CoinContext)
   const [displayCoin, setDisplayCoin] = useState([])
   const [input, setInput] = useState("")
@@ -86,4 +86,4 @@ const Coin = () => {
   )
 }
 
-export default Coin
+export default CoinTable
