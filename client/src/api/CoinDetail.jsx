@@ -13,22 +13,16 @@ const CoinDetail = () => {
 
     const fetchCoinData = async () => {
         try {
-            const response = await fetch(
-                `https://api.coingecko.com/api/v3/coins/${coinId}`
-            );
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const data = await response.json();
-            console.log('Fetched data:', data);
-            setCoinData(data);
-
+          const response = await fetch(
+            `http://localhost:5000/api/coins/${coinId}`
+          );
+          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+          const data = await response.json();
+          setCoinData(data);
         } catch (error) {
-            console.error('Error fetching coins:', error);
+          console.error('Error fetching coin details:', error);
         }
-    }
+      };
 
 
     useEffect(() => {
