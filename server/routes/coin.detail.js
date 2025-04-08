@@ -3,9 +3,7 @@ import axios from 'axios';
 import CoinDetails from '../models/CoinDetails.js';
 
 const COINGECKO_API = 'https://api.coingecko.com/api/v3';
-
 const router = express.Router();
-
 const CACHE_DURATION = 15 * 60 * 1000; 
 
 router.get('/:id', async (req, res) => {
