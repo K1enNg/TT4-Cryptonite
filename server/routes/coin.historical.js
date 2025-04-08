@@ -6,64 +6,64 @@ const COINGECKO_API = 'https://api.coingecko.com/api/v3';
 const router = express.Router();
 const CACHE_DURATION = 15 * 60 * 1000;
 
-const SUPPORTED_DAYS = ['1', '7', '14', '30', '90', '180', '365', 'max'];
+const SUPPORTED_DAYS = ['1', '7','10', '14', '30', '90', '180', '365', 'max'];
+const SUPPORTED_CURRENCIES = ['usd', 'eur', 'gbp', 'jpy', 'btc', 'eth'];
 
-router.get('/:id', async (req, res) => {
+router.get('/:id/market_chart', async (req, res) => {
   const { id } = req.params;
-  const { vs_currency = 'usd', days = '30' } = req.query;
+  const { vs_currency = 'usd', days = '10' } = req.query;
+
+  if (!SUPPORTED_CURRENCIES.includes(vs_currency.toLowerCase())) {
+    return res.status(400).json({
+      error: 'Unsupported currency',
+      supported_values: SUPPORTED_CURRENCIES
+    });
+  }
+
+  if (!SUPPORTED_DAYS.includes(days)) {
+    return res.status(400).json({
+      error: 'Unsupported days value',
+      supported_values: SUPPORTED_DAYS
+    });
+  }
 
   try {
-    if (!SUPPORTED_DAYS.includes(days)) {
-      return res.status(400).json({ 
-        error: 'Invalid days parameter',
-        supported_values: SUPPORTED_DAYS 
+    const cacheKey = { coinId: id, vsCurrency: vs_currency, days };
+    const cachedData = await CoinHistoricalData.findOne(cacheKey);
+    
+    if (cachedData && (Date.now() - cachedData.lastUpdated.getTime() < CACHE_DURATION)) {
+      return res.json({
+        success: true,
+        data: cachedData.data,
+        cached: true
       });
     }
 
-    const cacheKey = { coinId: id, vsCurrency: vs_currency, days };
-    const cachedData = await CoinHistoricalData.findOne(cacheKey);
-    const isCacheValid = cachedData && 
-      (Date.now() - cachedData.lastUpdated.getTime() < CACHE_DURATION);
-
-    if (isCacheValid) {
-      console.log(`Serving cached historical data (${id}, ${vs_currency}, ${days}d)`);
-      return res.json(cachedData.data);
-    }
-
-    console.log(`Fetching fresh data (${id}, ${vs_currency}, ${days}d)`);
-    const response = await axios.get(`${COINGECKO_API}/coins/${id}/market_chart`, {
+    const { data } = await axios.get(`${COINGECKO_API}/coins/${id}/market_chart`, {
       params: { vs_currency, days },
       timeout: 5000
     });
 
-    const freshData = response.data;
-
-    await CoinHistoricalData.findOneAndUpdate(
+    CoinHistoricalData.findOneAndUpdate(
       cacheKey,
-      { data: freshData, lastUpdated: Date.now() },
-      { upsert: true }
-    );
+      { data, lastUpdated: new Date() },
+      { upsert: true, new: true }
+    ).catch(console.error);
 
-    res.json(freshData);
+    res.json({
+      success: true,
+      data,
+      cached: false
+    });
+
   } catch (error) {
-    console.error(`Error (${id}, ${vs_currency}, ${days}d):`, error.message);
+    console.error(`[Historical Error] ${id}:`, error.message);
     
-    if (error.response) {
-      res.status(error.response.status).json({
-        error: 'CoinGecko API error',
-        details: error.response.data
-      });
-    } else if (error.request) {
-      res.status(503).json({ 
-        error: 'Network error',
-        details: 'Failed to reach CoinGecko API' 
-      });
-    } else {
-      res.status(500).json({ 
-        error: 'Server error',
-        details: error.message 
-      });
-    }
+    const staleData = await CoinHistoricalData.findOne({
+      coinId: id,
+      vsCurrency: vs_currency,
+      days
+    });
   }
 });
 

@@ -5,16 +5,21 @@ const LineChart = ({ historicalData }) => {
     const [data, setData] = useState([["Date", "Price"]]);
 
     useEffect(() => {
-        const dataCopy = [["Date", "Price"]];
-        if (historicalData?.prices) {
-            historicalData.prices.forEach((item) => {
-                const date = new Date(item[0]);
-                const price = item[1];
-                dataCopy.push([date, price]);
-            });
-            setData(dataCopy);
-        }
-    }, [historicalData]);
+        if (!historicalData?.data?.prices) return;
+      
+        const chartData = [['Date', 'Price']];
+      
+        historicalData.data.prices.forEach(([timestamp, price]) => {
+          const date = new Date(timestamp);
+          if (!isNaN(date.getTime())) {
+            chartData.push([date, price]);
+          }
+        });
+      
+        console.log("Final chart data:", chartData);
+        setData(chartData);
+      }, [historicalData]);
+      
 
     const options = {
         title: 'Price over Last 10 Days',
