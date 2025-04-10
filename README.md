@@ -27,7 +27,7 @@ Cryptonite is a gateway to understanding the world of cryptocurrency. It provide
 | Layer         | Technology Used |
 |--------------|----------------|
 | **Frontend**  | React, TailwindCSS |
-| **Backend**   | Node.js |
+| **Backend**   | Node.js, MongoDB |
 | **API**       | CoinGecko API |
 
 ---
@@ -35,26 +35,37 @@ Cryptonite is a gateway to understanding the world of cryptocurrency. It provide
 ## Structure
 
 ```
-src/
-├── api/
-│   ├── CoinContext.jsx        # Context provider for coin data
-│   └── CoinDetail.jsx         # API calls for detailed coin information
-├── assets/                    # Static assets (images, icons, etc.)
-├── components/
-│   ├── Coin.jsx               # Main coin listing component
-│   ├── CoinDetail.jsx         # Detailed view of a single coin
-│   ├── Hero.jsx               # Hero section component
-│   ├── Layout.jsx             # Main layout wrapper component
-│   ├── Navbar.jsx             # Navigation bar component
-│   ├── Service.jsx            # Services section component
-├── pages/
-│   ├── Homepage.jsx           # Home page
-│   ├── About.jsx              # About page
-│   ├── Contact.jsx            # Contact page
-│   └── Service.jsx            # Services page
-├── utils/                     # i18n for web translation
-├── App.jsx                    # Project router 
-└── main.jsx                   # Application entry point
+TT4-Cryptonite/
+│
+├── client/                    # Frontend (React and TailwindCSS)
+│   ├── public/                
+│   ├── src/                   
+│   │   ├── api/               # Functions for API calls
+│   │   ├── assets/            # Images, icons, etc.
+│   │   ├── components/        # React components
+│   │   ├── contexts/          # Static text content storage
+│   │   ├── locales/           # Localization files
+│   │   ├── pages/             # Page-level components (Routes)
+│   │   ├── utils/             # Localization setup
+│   │   ├── App.jsx            # Router for project
+│   │   ├── main.jsx           # Entry point of frontend
+│   │   └── index.css          # Global styling
+│   └── index.html
+│  
+│
+├── server/                    # Backend (Node.js)
+│   ├── models/                # Mongoose models
+│   │   ├── CoinDetails.js
+│   │   ├── CryptoMarketData.js
+│   │   └── HistoricalDetail.js
+│   ├── routes/                # API route handlers
+│   │   ├── coin.detail.js
+│   │   ├── coin.historical.js
+│   │   └── coin.market.js
+│   ├── config.js              # Environment variables / DB config
+│   └── index.js               # Backend entry point
+│
+└── dockerfile                 # Docker configuration for app deployment
 ```
 
 ## API Integration 
