@@ -84,7 +84,7 @@ Cryptonite leverages the **CoinGecko API** to fetch accurate and up-to-date cryp
 ---
 
 ## Architecture Diagram
-![Alt text](CryptoniteArchitectureDiagram.png)
+![Alt text](CryptoniteArchitectureDiagramV2.png)
 
 ## Developers 
 - **Christian Denis Marcelin**  
