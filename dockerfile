@@ -2,27 +2,12 @@ FROM node:23.11.0-slim AS base
 
 WORKDIR /app
 
-FROM base AS frontend-base
-COPY client/package.json .
-COPY client/package-lock.json .
+COPY package.json .
 RUN npm install --omit-dev
-COPY client/vite.config.js  client/index.html  client/eslint.config.js .
-COPY client/src ./src
+COPY vite.config.js . index.html ./ eslint.config.js ./
+COPY /src ./src
 
-FROM frontend-base AS frontend-build
+FROM base AS dev
 RUN npm run build
 
-FROM base AS final
-ENV NODE_ENV=production
-COPY server/models ./models
-COPY server/routes ./routes
-COPY server/config.js .
-COPY server/package.json .
-COPY server/package-lock.json .
-RUN npm install --omit-dev
-COPY server/index.js .
-COPY --from=frontend-build /app/dist ./src/static
-EXPOSE 5000
-
-
-CMD [ "node", "index.js" ]
+CMD [ "node", "/src" ]
