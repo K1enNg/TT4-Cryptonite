@@ -1,16 +1,1 @@
-name: cryptonite-app
-services:
-  web:
-    container_name: cryptonite-web
-    build:
-      context: ./
-      target: final
-    develop:
-      watch:
-        - path: ./server/package.json
-          action: rebuild
-        - path: ./server/index.js
-          target: app/index.js
-          action: sync
-    ports:
-      - '5050:5000'
+
