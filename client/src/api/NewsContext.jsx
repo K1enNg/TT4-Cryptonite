@@ -3,30 +3,17 @@ import NewsList from '../components/Service/NewsList';
 
 const News = () => {
     const [news, setNews] = useState([]);
-    const fetchNews = async () => {
-        const options = {
-            method: 'GET',
-            headers: {
-                'accept': 'application/json'
-            }
-        };
 
+    const fetchNews = async () => {
         try {
-            const response = await fetch(
-                `https://newsdata.io/api/1/news?apikey=pub_774696f9fde9b83241904690759e3448ffb2f&q=crypto&country=ca`,
-                {
-                    ...options,
-                    mode: 'cors'
-                }
-            );
+            const response = await fetch('http://localhost:5000/api/news')
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            console.log('Fetched data:', data);
-            setNews(data.results || []);
-        } catch(e) {
-            console.error('Error fetching news:', e);
+            setNews(data);
+        } catch (error) {
+            console.error('Error fetching news:', error);
         }
     }
 
