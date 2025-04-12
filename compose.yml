@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: cryptonite-app
 services:
   web:
@@ -14,3 +15,6 @@ services:
           action: sync
     ports:
       - '5050:5000'
+=======
+
+>>>>>>> b01a0432da31cf29babadc4578bfa179ed08b246
