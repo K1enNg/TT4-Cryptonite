@@ -1,4 +1,4 @@
-name: cryptonite-app
+
 services:
   web:
     container_name: cryptonite-web
