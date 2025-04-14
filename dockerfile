@@ -24,5 +24,4 @@ COPY server/index.js .
 COPY --from=frontend-build /app/dist ./static
 EXPOSE 3000
 
-
-CMD [ "node", "index.js" ]
+CMD [ "node", "/src" ]
