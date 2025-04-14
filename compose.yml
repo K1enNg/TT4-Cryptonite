@@ -14,7 +14,11 @@ services:
           action: sync
     ports:
       - '5050:5000'
-
+    environment:
+      - CONN_STR=mongodb://admin:admin@mongodb
+    depends_on:
+      - mongodb
+      
   mongodb:
     image: mongodb/mongodb-community-server:6.0-ubi8
     environment:
