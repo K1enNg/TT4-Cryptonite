@@ -13,7 +13,7 @@ services:
           target: app/index.js
           action: sync
     ports:
-      - '5050:5000'
+      - '3000:3000'
     environment:
       - CONN_STR=mongodb://admin:admin@mongodb
     depends_on:

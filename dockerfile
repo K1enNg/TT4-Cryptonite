@@ -22,7 +22,7 @@ COPY server/package-lock.json .
 RUN npm install --omit-dev
 COPY server/index.js .
 COPY --from=frontend-build /app/dist ./static
-EXPOSE 5000
+EXPOSE 3000
 
 
 CMD [ "node", "index.js" ]

@@ -22,6 +22,8 @@ const app = express();
 
 app.use( express.static( __dirname + '/static' ) );
 
+
+
 app.use(cors());
 app.use('/api/coins/markets', marketRouter);
 app.use('/api/coins', detailRouter);

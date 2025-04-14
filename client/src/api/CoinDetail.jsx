@@ -14,7 +14,7 @@ const CoinDetail = () => {
     const fetchCoinData = async () => {
         try {
           const response = await fetch(
-            `http://localhost:5000/api/coins/${coinId}`
+            `http://localhost:3000/api/coins/${coinId}`
           );
           if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
           const data = await response.json();
