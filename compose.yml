@@ -1,4 +1,4 @@
-
+name: cryptonite-app
 services:
   web:
     container_name: cryptonite-web
@@ -14,3 +14,13 @@ services:
           action: sync
     ports:
       - '5050:5000'
+
+  mongodb:
+    image: mongodb/mongodb-community-server:6.0-ubi8
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+    volumes:
+      - type: bind
+        source: ./data
+        target: /data/db
