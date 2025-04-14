@@ -6,7 +6,7 @@ FROM base AS frontend-base
 COPY client/package.json .
 COPY client/package-lock.json .
 RUN npm install --omit-dev
-COPY client/vite.config.js  client/index.html  client/eslint.config.js .
+COPY client/vite.config.js  client/index.html  client/eslint.config.js ./
 COPY client/src ./src
 
 FROM frontend-base AS frontend-build
@@ -21,7 +21,7 @@ COPY server/package.json .
 COPY server/package-lock.json .
 RUN npm install --omit-dev
 COPY server/index.js .
-COPY --from=frontend-build /app/dist ./src/static
-EXPOSE 5000
+COPY --from=frontend-build /app/dist ./static
+EXPOSE 3000
 
 CMD [ "node", "/src" ]

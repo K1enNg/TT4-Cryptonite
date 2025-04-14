@@ -9,8 +9,20 @@ import detailRouter from './routes/coin.detail.js';
 import historicalRouter from './routes/coin.historical.js';
 import newsRouter from './routes/coin.news.js';
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath( import.meta.url );
+const __dirname  = path.dirname( __filename );
 
 const app = express();
+
+// app.get('/', (req, res) => {
+//     res.send('API is running');
+//   });
+
+app.use( express.static( __dirname + '/static' ) );
+
+
 
 app.use(cors());
 app.use('/api/coins/markets', marketRouter);
