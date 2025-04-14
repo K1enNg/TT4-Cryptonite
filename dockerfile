@@ -21,7 +21,7 @@ COPY server/package.json .
 COPY server/package-lock.json .
 RUN npm install --omit-dev
 COPY server/index.js .
-COPY --from=frontend-build /app/dist ./src/static
+COPY --from=frontend-build /app/dist ./static
 EXPOSE 5000
 
 
