@@ -28,4 +28,3 @@ services:
       - type: bind
         source: ./data
         target: /data/db
-      - '5050:5000'
